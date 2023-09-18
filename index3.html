@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Kalkulator Sederhana</h2>
+
+<form>
+  <label for="fname">Angka 1:</label><br>
+  <input type="text" id="Angka1" name="angka1" placeholder="Masukkan Angka"><br>
+  <label for="lname">Angka 2:</label><br>
+  <input type="text" id="Angka2" name="angka2" placeholder="Masukkan Angka">
+</form>
+
+<button type="button" onclick="plus(parseInt(document.getElementById('Angka1').value), parseInt(document.getElementById('Angka2').value))">+</button>
+<button type="button" onclick="min(parseInt(document.getElementById('Angka1').value), parseInt(document.getElementById('Angka2').value))"">-</button>
+<button type="button" onclick="multiply(parseInt(document.getElementById('Angka1').value), parseInt(document.getElementById('Angka2').value))"">x</button>
+<button type="button" onclick="devide(parseInt(document.getElementById('Angka1').value), parseInt(document.getElementById('Angka2').value))"">/</button>
+
+<p id ="output"></p>
+<script>
+
+    function plus(p1, p2) {
+        document.getElementById('output').innerHTML = p1 + p2;
+    }
+
+    function min(p1, p2) {
+        document.getElementById('output').innerHTML = p1 - p2;
+    }
+ 
+    function multiply(p1, p2) {
+        document.getElementById('output').innerHTML = p1 * p2;
+    }
+
+    function devide(p1, p2) {
+        if (p2 != 0 ){
+            document.getElementById('output').innerHTML = p1 / p2;
+        }
+        else {
+            document.getElementById('output').innerHTML = "Invalid Result";
+        }
+    }
+
+</script>
+</body>
+</html> 
